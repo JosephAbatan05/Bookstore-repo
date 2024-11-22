@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BookBase</title>
+  <link rel="stylesheet" href="category.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo">📚 BookBase</div>
+      <ul class="menu">
+        <li class="active">Discover</li>
+        <li>Category</li>
+        <li>My Library</li>
+        <li>Download</li>
+        <li>Audio Books</li>
+        <li>Favourite</li>
+        <li>Support</li>
+        <li>Settings</li>
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <header>
+        <input type="text" placeholder="Search your favourite books">
+        <div class="user">Balogun</div>
+        <div class="menu">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+      </header>
+
+      <section class="recommended">
+        <h2>Recommended</h2>
+        <div class="books">
+          <!-- Book Cards -->
+          <div class="book-card">
+            <img src="https://m.media-amazon.com/images/I/71tbalAHYCL.jpg" alt="The Psychology of Money">
+            <p>The Psychology of Money</p>
+            <span>Morgan Housel</span>
+          </div>
+          <div class="book-card">
+            <img src="https://m.media-amazon.com/images/I/71tbalAHYCL.jpg" alt="How Innovation Works">
+            <p>How Innovation Works</p>
+            <span>Matt Ridley</span>
+          </div>
+          <div class="book-card">
+            <img src="https://m.media-amazon.com/images/I/71tbalAHYCL.jpg" alt="Company of One">
+            <p>Company of One</p>
+            <span>Paul Jarvis</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="categories">
+        <h2>Categories</h2>
+        <div class="category-tags">
+          <span>All</span>
+          <span>Sci-Fi</span>
+          <span>Fantasy</span>
+          <span>Drama</span>
+          <span>Business</span>
+          <span>Education</span>
+          <span>Geography</span>
+        </div>
+        <div class="category-books">
+          <div class="book-card">
+            <img src="https://m.media-amazon.com/images/I/71tbalAHYCL.jpg" alt="The Bees">
+            <p>The Bees</p>
+            <span>Laline Paull</span>
+          </div>
+          <div class="book-card">
+            <img src="https://m.media-amazon.com/images/I/71tbalAHYCL.jpg" alt="Real Help">
+            <p>Real Help</p>
+            <span>Ayodeji Awosika</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Book Preview Section -->
+    <aside class="book-preview">
+      <img src="https://m.media-amazon.com/images/I/71tbalAHYCL.jpg" alt="Company of One">
+      <h3>Company of One</h3>
+      <p>Paul Jarvis</p>
+      <div class="ratings">
+        ⭐⭐⭐⭐⭐ <span>4.6</span>
+      </div>
+      <button>Read Now</button>
+    </aside>
+  </div>
+  <!-- <script src="script.js"></script> -->
+   <script>
+    document.querySelector('.menu').addEventListener('click', () => {
+      document.querySelector('.sidebar').classList.toggle('active');
+    })
+   </script>
+</body>
+</html>

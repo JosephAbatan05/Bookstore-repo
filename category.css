@@ -1,0 +1,209 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+  }
+  
+  .container {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  /* Sidebar Styling */
+  .sidebar {
+    width: 20%;
+    background-color: #f5f6f7;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  
+  .menu li {
+    list-style: none;
+    margin: 15px 0;
+    font-size: 18px;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  .menu .active {
+    color: #0073e6;
+    font-weight: bold;
+  }
+  
+  /* Main Content Styling */
+  .main-content {
+    width: 60%;
+    padding: 20px;
+    overflow-y: auto;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  header input {
+    width: 70%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .user {
+    background-color: #ddd;
+    padding: 10px;
+    border-radius: 10%;
+  }
+  
+  .recommended, .categories {
+    margin-top: 20px;
+  }
+  
+  .books, .category-books {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 15px;
+  }
+  
+  .book-card {
+    text-align: center;
+  }
+  
+  .book-card img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .book-card p {
+    font-weight: bold;
+    margin-top: 5px;
+  }
+  
+  .category-tags span {
+    background-color: #eee;
+    padding: 8px 12px;
+    margin: 5px;
+    border-radius: 15px;
+    cursor: pointer;
+  }
+  
+  .category-tags span:hover {
+    background-color: #ddd;
+  }
+  
+  /* Book Preview Styling */
+  .book-preview {
+    width: 20%;
+    background-color: #003366;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .book-preview img {
+    width: 80%;
+    border-radius: 8px;
+  }
+  
+  .book-preview h3 {
+    font-size: 20px;
+    margin-top: 15px;
+  }
+  
+  .book-preview p {
+    font-size: 16px;
+    color: #ccc;
+    margin: 5px 0;
+  }
+  
+  .ratings {
+    margin: 10px 0;
+  }
+  
+  button {
+    background-color: #0073e6;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .menu {
+      /* position: absolute; */
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      cursor: pointer;
+    }
+    .menu div{
+      width: 20px;
+      height: 3px;
+      background-color: #000;
+    }
+    .active{
+      display: block;
+    }
+    .user{
+      display: none;
+    }
+    .container {
+      flex-direction: column;
+    }
+  
+    .sidebar, .book-preview {
+      width: 100%;
+      text-align: center;
+      padding: 10px;
+      position: absolute;
+      display: none;
+      left: 0;
+      top: 10%;
+      animation: myanime 500ms ease-in-out;
+    }
+  
+    @keyframes myanime{
+      from{
+        height: 0;
+      }
+      to{
+        height: 60vh;
+      }
+    }
+    .main-content {
+      width: 100%;
+    }
+  
+    .category-tags{
+        gap: 4px;
+    }
+    .books, .category-books {
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+    .book-preview{
+        display: none;
+    }
+  }
+  
