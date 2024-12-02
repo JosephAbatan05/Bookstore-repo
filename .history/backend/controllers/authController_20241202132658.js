@@ -62,6 +62,9 @@ const Book = require('../models/Book');
 // Add to cart
 exports.addToCart = async (req, res) => {
 
+
+
+
   try {
     const { bookId, quantity } = req.body;
     let cart = await Cart.findOne({ userId: req.user._id });
@@ -74,17 +77,18 @@ exports.addToCart = async (req, res) => {
               cart.items[itemIndex].quantity += quantity;
             } else {
               cart.items.push({ bookId, quantity });
-            }
-          
-
-
+            };
           await cart.save();
           res.json({ message: 'Book added to cart', cart });
-        }
+          };
+        }}
         catch(error){
           res.status(400).json({ message: 'Failed to add to cart', error });
         }
-      };
+  };
+
+
+
 
       // Get cart items
       exports.getCart = async (req, res) =>{
@@ -109,8 +113,9 @@ exports.addToCart = async (req, res) => {
             await cart.save();
         
             res.json({ message: 'Book removed from cart', cart });
-          } catch (error) {
+          } 
+          catch (error) {
             res.status(400).json({ message: 'Failed to remove from cart', error });
           }
         };
-  }
+      
