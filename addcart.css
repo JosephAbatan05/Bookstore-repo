@@ -1,0 +1,158 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 24px;
+}
+
+/* Container */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+/* Book Details Section */
+.book-details {
+    display: flex;
+    gap: 20px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 3;
+    min-width: 280px;
+    max-width: 70%;
+}
+
+.book-cover {
+    width: 150px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.book-info h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.book-info p {
+    margin: 5px 0;
+}
+
+.rating {
+    color: #ffba00;
+    font-size: 20px;
+}
+
+.book-description {
+    margin-top: 15px;
+    color: #666;
+}
+
+.book-meta, .popular-questions {
+    margin-top: 15px;
+}
+
+/* Similar Books Sidebar */
+.similar-books {
+    flex: 1;
+    padding: 20px;
+    margin-left: 20px;
+    background-color: #fff;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    min-width: 200px;
+}
+
+.similar-books h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.similar-books ul {
+    list-style: none;
+}
+
+.similar-books li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.similar-books img {
+    width: 40px;
+    height: 60px;
+    border-radius: 4px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.similar-books p {
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .book-details, .similar-books {
+        max-width: 100%;
+        margin: 0;
+        margin-bottom: 20px;
+    }
+
+    .book-cover {
+        width: 120px;
+    }
+
+    .book-info h2 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .book-cover {
+        width: 100px;
+    }
+
+    .book-info h2 {
+        font-size: 20px;
+    }
+
+    .rating {
+        font-size: 16px;
+    }
+
+    .similar-books h3 {
+        font-size: 16px;
+    }
+
+    .similar-books img {
+        width: 30px;
+        height: 45px;
+    }
+}

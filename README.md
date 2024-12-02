@@ -1,0 +1,2 @@
+# Book-Library-Software-project
+A book Library app displaying with Books,Cart page,Listing Catalogue (with basic filtering list and categories).It performs Crude operations like Create, Delete,Update and Read Books
